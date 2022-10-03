@@ -1,7 +1,7 @@
 import {Sequelize} from "sequelize";
 import sequelize from "../config/database";
 
-const Player = sequelize.define('user', {
+const Player = sequelize.define('player', {
         id: {
             type: Sequelize.INTEGER,
             autoIncrement: true,
@@ -19,22 +19,15 @@ const Player = sequelize.define('user', {
             unique: true,
             allowNull: false
         },
-        numberOfMatches: {
+        jerseyNumber: {
             type: Sequelize.INTEGER,
-            allowNull: false,
+            unique: true,
+            allowNull: false
         },
-        goalsScored: {
-            type: Sequelize.INTEGER,
-            allowNull: false,
-            defaultValue: false
-        },
-        numberOfYellows: {
-            type: Sequelize.INTEGER,
-            defaultValue: false,
-        },
-        numberOfReds: {
-            type: Sequelize.INTEGER,
-            defaultValue: false,
+        position: {
+            type: Sequelize.STRING,
+            unique: true,
+            allowNull: false
         },
     },
 )

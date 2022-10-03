@@ -1,7 +1,6 @@
 import {Sequelize} from "sequelize";
 
 require('dotenv').config();
-
 const {
 DATABASE_NAME,
 DATABASE_USERNAME,
